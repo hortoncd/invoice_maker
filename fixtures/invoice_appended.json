@@ -1,0 +1,20 @@
+{
+  "from": "My Great Company, Inc. ®\nMy Street Address\nMy City, State 00000",
+  "to": "My Great Customer\nATTN: The Dude\nCust Address\nCust Street Address\nCust City, State 11111",
+  "logo": "http://placekitten.com/320/140",
+  "number": 1,
+  "date": "2016-10-24",
+  "items": [
+    {
+      "name": "Some awesome task",
+      "quantity": 1,
+      "unit_cost": 270.0
+    },
+    {
+      "name": "Some other task",
+      "quantity": 2,
+      "unit_cost": 270.0
+                            }
+  ],
+  "notes": "Thank you so much for your business!"
+}

@@ -101,3 +101,7 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+# Mock API call(s)
+require 'webmock/rspec'
+WebMock.disable_net_connect!(:allow_localhost => true)
