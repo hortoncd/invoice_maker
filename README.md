@@ -2,9 +2,11 @@
 
 # InvoiceMaker
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/invoice_maker`. To experiment with that code, run `bin/console` for an interactive prompt.
+A gem to do the basic work of creating a PDF invoice using https://invoice-generator.com.  Inspired by
+the article here:
+https://gelato.io/blog/minimum-viable-ruby-api-client-with-invoiced-and-httparty.
 
-TODO: Delete this and the text above, and describe your gem
+API documentation lives at https://github.com/Invoiced/invoice-generator-api.
 
 ## Installation
 
@@ -24,7 +26,60 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Require the gem, and optionally include the module for simplicity
+```ruby
+require 'invoice_maker'
+
+include InvoiceMaker
+```
+
+The gem relies on general options for the invoice being set with the 'set' method.  This can include all the line items, or they can be added individually after initial options are set.
+
+The basic data can include any of the options documented in the API documentation referenced above.  A 
+
+```ruby
+data = {
+  "from": "My Great Company, Inc. ®\nMy Street Address\nMy City, State 00000",
+  "to": "My Great Customer\nATTN: The Dude\nCust Address\nCust Street Address\nCust City, State 11111",
+  "logo": "http://placekitten.com/320/140",
+  "number": 1,
+  "date": "2016-10-24",
+  "items": [
+    {
+      "name": "Some awesome task",
+      "quantity": 1,
+      "unit_cost": 270.0
+    }
+  ],
+  "notes": "Thank you so much for your business!"
+}
+```
+
+Instantiate an object and add the data, followed by adding any line items as necessary.
+```ruby
+i = Invoice
+i.set(data)
+
+item = {
+  "name": "Some additional awesome task",
+  "quantity": 2,
+  "unit_cost": 270.0
+}
+
+i.append_item(item)
+```
+Optionally set a destination directory for the generated PDF invoice.  Default is "/tmp".
+```ruby
+i.dest_dir = "/somedir"
+```
+
+Once all data is set, generate the PDF invoice.  The filename will be returned from the call to generate.
+```ruby
+fname = i.generate
+puts fname
+```
+
+`examples/usage.rb` is a sample script that loads data from a json file and generates a sample invoice.
 
 ## Development
 
@@ -34,10 +89,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/invoice_maker.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/hortoncd/invoice_maker.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
