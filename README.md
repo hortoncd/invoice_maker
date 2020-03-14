@@ -1,5 +1,7 @@
 # InvoiceMaker
 
+![](https://github.com/hortoncd/invoice_maker/workflows/Ruby/badge.svg)
+
 A gem to do the basic work of creating a PDF invoice using https://invoice-generator.com.  Inspired by
 the article here:
 https://gelato.io/blog/minimum-viable-ruby-api-client-with-invoiced-and-httparty.
@@ -33,7 +35,7 @@ include InvoiceMaker
 
 The gem relies on general options for the invoice being set with the 'set' method.  This can include all the line items, or they can be added individually after initial options are set.
 
-The basic data can include any of the options documented in the API documentation referenced above.  A 
+The basic data can include any of the options documented in the API documentation referenced above.
 
 ```ruby
 data = {
