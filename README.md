@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/hortoncd/invoice_maker.svg?style=svg)](https://circleci.com/gh/hortoncd/invoice_maker)
-
 # InvoiceMaker
 
 A gem to do the basic work of creating a PDF invoice using https://invoice-generator.com.  Inspired by
