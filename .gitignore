@@ -10,3 +10,4 @@
 /spec/reports/
 /tmp/
 .rspec
+.ruby-version
