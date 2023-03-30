@@ -1,0 +1,61 @@
+PATH
+  remote: .
+  specs:
+    invoice_maker (0.1.1)
+      httparty (~> 0.21.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
+    crack (0.4.5)
+      rexml
+    diff-lcs (1.5.0)
+    docile (1.4.0)
+    hashdiff (1.0.1)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
+    mini_mime (1.1.2)
+    multi_xml (0.6.0)
+    public_suffix (5.0.1)
+    rake (12.3.3)
+    rexml (3.2.5)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.0)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
+    webmock (2.1.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (> 1.17)
+  invoice_maker!
+  rake (~> 12.3.3)
+  rspec (~> 3.5)
+  simplecov (>= 0.12.0)
+  webmock (~> 2.1.0)
+
+BUNDLED WITH
+   2.1.4
