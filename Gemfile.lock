@@ -7,8 +7,8 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.1)
-      public_suffix (>= 2.0.2, < 6.0)
+    addressable (2.9.0)
+      public_suffix (>= 2.0.2, < 8.0)
     crack (0.4.5)
       rexml
     diff-lcs (1.5.0)
@@ -19,7 +19,7 @@ GEM
       multi_xml (>= 0.5.2)
     mini_mime (1.1.2)
     multi_xml (0.6.0)
-    public_suffix (5.0.1)
+    public_suffix (7.0.5)
     rake (12.3.3)
     rexml (3.3.9)
     rspec (3.12.0)
